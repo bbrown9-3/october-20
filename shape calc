@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string shape;
+    float length, width, radius;
+    float area, perimeter;
+    const float PI = 3.14159;
+
+    cout << "Enter shape: ";
+    cin >> shape;
+
+    if (shape == "rectangle")
+    {
+        cout << "Enter length: ";
+        cin >> length;
+
+        cout << "Enter width: ";
+        cin >> width;
+
+        area = length * width;
+        perimeter = 2 * (length + width);
+
+        cout << "Area: " << area << endl;
+        cout << "Perimeter: " << perimeter << endl;
+    }
+    else if (shape == "circle")
+    {
+        cout << "Enter radius: ";
+        cin >> radius;
+
+        area = PI * radius * radius;
+        perimeter = 2 * PI * radius;
+
+        cout << "Area: " << area << endl;
+        cout << "Circumference: " << perimeter << endl;
+    }
+    else
+    {
+        cout << "Invalid shape." << endl;
+    }
+
+    return 0;
+}
